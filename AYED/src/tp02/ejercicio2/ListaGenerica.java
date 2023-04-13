@@ -113,5 +113,4 @@ public abstract class ListaGenerica<T> {
 	 * Devuelve una lista sin elementos.
 	 * **/
 
-
 }
