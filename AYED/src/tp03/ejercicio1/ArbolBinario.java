@@ -81,7 +81,7 @@ public class ArbolBinario<T> {
 
 	public int contarHojas() {
 		int hojas = 0;
-		
+
 		if (!this.esHoja()) {
 			if (this.tieneHijoDerecho())
 				hojas += this.getHijoDerecho().contarHojas();
@@ -96,21 +96,21 @@ public class ArbolBinario<T> {
 	public ArbolBinario<T> espejo() {
 		ArbolBinario<T> aux = null;
 		if (!this.esHoja()) {
-			
+
 			if (this.tieneHijoDerecho())
 				this.getHijoDerecho().espejo();
-			
+
 			if (this.tieneHijoIzquierdo())
 				this.getHijoIzquierdo().espejo();
-			
+
 			aux = this.getHijoIzquierdo();
 			this.agregarHijoIzquierdo(this.getHijoDerecho());
 			this.agregarHijoDerecho(aux);
-			
+
 		}
 		return this;
 	}
-	
+
 	public int altura() {
 		int alto = -1;
 		if (this.esHoja())
@@ -151,7 +151,7 @@ public class ArbolBinario<T> {
 		}
 
 	}
-	
+
 	public void enOrden() {
 		if (this.tieneHijoIzquierdo())
 			this.getHijoIzquierdo().enOrden();

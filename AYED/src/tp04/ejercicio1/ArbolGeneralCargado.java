@@ -18,35 +18,34 @@ public class ArbolGeneralCargado {
 		ArbolGeneral<Integer> a13 = new ArbolGeneral<Integer>(13);
 		ArbolGeneral<Integer> a14 = new ArbolGeneral<Integer>(14);
 		ArbolGeneral<Integer> a15 = new ArbolGeneral<Integer>(15);
-		
+
 		a1.agregarHijo(a2);
 		a1.agregarHijo(a3);
-		
+
 		a2.agregarHijo(a4);
 		a2.agregarHijo(a5);
 		a2.agregarHijo(a6);
-		
-		a3.agregarHijo(a7);		
-		
+
+		a3.agregarHijo(a7);
+
 		a4.agregarHijo(a10);
 		a4.agregarHijo(a11);
-		
+
 		a5.agregarHijo(a12);
-		
+
 		a6.agregarHijo(a13);
-		
+
 		a7.agregarHijo(a8);
 		a7.agregarHijo(a9);
 		a7.agregarHijo(a14);
 		a7.agregarHijo(a15);
-		
+
 	}
 
 	public ArbolGeneral<Integer> getArbol() {
 		return a1;
 	}
-	
-	
+
 //							1
 //	
 //				2							3
@@ -54,5 +53,5 @@ public class ArbolGeneralCargado {
 //	   4		5		6			   		7	   	
 //	   
 //	10	11		12		13			 8	 9   14	  15
-	
+
 }

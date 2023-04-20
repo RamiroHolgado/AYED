@@ -25,7 +25,7 @@ public class ContadorArbol {
 		}
 		return l;
 	}
-	
+
 	public ListaEnlazadaGenerica<Integer> numerosParesPostOrden(ArbolBinario<Integer> a,
 			ListaEnlazadaGenerica<Integer> l) {
 
@@ -35,7 +35,7 @@ public class ContadorArbol {
 
 			if (a.tieneHijoDerecho())
 				l = numerosParesInOrden(a.getHijoDerecho(), l);
-			
+
 			if (a.getDato() % 2 == 0)
 				l.agregarFinal(a.getDato());
 		}

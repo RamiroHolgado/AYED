@@ -13,10 +13,10 @@ public class RecorridosAG {
 		if (!a.esVacio()) {
 			if (a.getDato() > n && a.getDato() % 2 != 0)
 				l.agregarFinal(a.getDato());
-			
+
 			if (a.tieneHijos()) {
 				a.getHijos().comenzar();
-				
+
 				while (!a.getHijos().fin())
 					numerosImparesMayoresQuePreOrden(a.getHijos().proximo(), n, l);
 			}
@@ -37,9 +37,8 @@ public class RecorridosAG {
 
 				while (!a.getHijos().fin())
 					numerosImparesMayoresQuePreOrden(a.getHijos().proximo(), n, l);
-			}else
-				if (a.getDato() > n && a.getDato() % 2 != 0)
-					l.agregarFinal(a.getDato());
+			} else if (a.getDato() > n && a.getDato() % 2 != 0)
+				l.agregarFinal(a.getDato());
 		}
 		return l;
 
@@ -62,7 +61,8 @@ public class RecorridosAG {
 
 	}
 
-	public static ListaGenerica<Integer> numerosImparesMayoresQuePorNiveles(ArbolGeneral<Integer> a, Integer n, ListaGenerica<Integer> l) {
+	public static ListaGenerica<Integer> numerosImparesMayoresQuePorNiveles(ArbolGeneral<Integer> a, Integer n,
+			ListaGenerica<Integer> l) {
 		if (!a.esVacio()) {
 			ColaGenerica<ArbolGeneral<Integer>> cola = new ColaGenerica<>();
 			ArbolGeneral<Integer> arbol = null;
@@ -83,14 +83,14 @@ public class RecorridosAG {
 
 		return l;
 	}
-	
+
 	public static void main(String[] args) {
 		ArbolGeneralCargado a = new ArbolGeneralCargado();
 		ListaGenerica<Integer> lPreOrden = new ListaEnlazadaGenerica<>();
 		ListaGenerica<Integer> lInOrden = new ListaEnlazadaGenerica<>();
 		ListaGenerica<Integer> lPostOrden = new ListaEnlazadaGenerica<>();
-		ListaGenerica<Integer> lPorNiveles = new ListaEnlazadaGenerica<>();		
-		
+		ListaGenerica<Integer> lPorNiveles = new ListaEnlazadaGenerica<>();
+
 		numerosImparesMayoresQuePreOrden(a.getArbol(), 0, lPreOrden);
 		System.out.println("lista pre orden");
 		lPreOrden.comenzar();
@@ -123,7 +123,6 @@ public class RecorridosAG {
 	}
 
 }
-
 
 //							1
 //

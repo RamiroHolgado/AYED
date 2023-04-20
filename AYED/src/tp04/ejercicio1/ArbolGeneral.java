@@ -18,7 +18,7 @@ public class ArbolGeneral<T> {
 	}
 
 	public void setHijos(ListaGenerica<ArbolGeneral<T>> hijos) {
-		if (hijos==null)
+		if (hijos == null)
 			this.hijos = new ListaEnlazadaGenerica<ArbolGeneral<T>>();
 		else
 			this.hijos = hijos;
@@ -30,7 +30,7 @@ public class ArbolGeneral<T> {
 
 	public ArbolGeneral(T dato, ListaGenerica<ArbolGeneral<T>> hijos) {
 		this(dato);
-		if (hijos==null)
+		if (hijos == null)
 			this.hijos = new ListaEnlazadaGenerica<ArbolGeneral<T>>();
 		else
 			this.hijos = hijos;
@@ -49,30 +49,28 @@ public class ArbolGeneral<T> {
 
 		return !this.tieneHijos();
 	}
-	
+
 	public boolean tieneHijos() {
 		return !this.hijos.esVacia();
 	}
-	
+
 	public boolean esVacio() {
 
 		return this.dato == null && !this.tieneHijos();
 	}
 
-	
-
 	public void eliminarHijo(ArbolGeneral<T> hijo) {
 		if (this.tieneHijos()) {
 			ListaGenerica<ArbolGeneral<T>> hijos = this.getHijos();
-			if (hijos.incluye(hijo)) 
+			if (hijos.incluye(hijo))
 				hijos.eliminar(hijo);
 		}
 	}
-	
+
 	public ListaEnlazadaGenerica<T> preOrden() {
 		return null;
 	}
-	
+
 	public Integer altura() {
 		// Falta implementar..
 		return 0;
