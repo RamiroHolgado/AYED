@@ -70,7 +70,7 @@ public class RecorridosAG {
 			while (!cola.esVacia()) {
 				arbol = cola.desencolar();
 
-				if (arbol.getDato() % 2 != 0)
+				if (arbol.getDato() % 2 != 0 && arbol.getDato() > n)
 					l.agregarFinal(arbol.getDato());
 
 				if (arbol.tieneHijos()) {
@@ -91,7 +91,7 @@ public class RecorridosAG {
 		ListaGenerica<Integer> lPostOrden = new ListaEnlazadaGenerica<>();
 		ListaGenerica<Integer> lPorNiveles = new ListaEnlazadaGenerica<>();
 
-		numerosImparesMayoresQuePreOrden(a.getArbol(), 0, lPreOrden);
+		numerosImparesMayoresQuePreOrden(a.getArbol(), 40, lPreOrden);
 		System.out.println("lista pre orden");
 		lPreOrden.comenzar();
 		while (!lPreOrden.fin())
@@ -99,7 +99,7 @@ public class RecorridosAG {
 
 		System.out.println();
 
-		numerosImparesMayoresQueInOrden(a.getArbol(), 0, lInOrden);
+		numerosImparesMayoresQueInOrden(a.getArbol(), 40, lInOrden);
 		System.out.println("lista in orden");
 		lInOrden.comenzar();
 		while (!lInOrden.fin())
@@ -107,7 +107,7 @@ public class RecorridosAG {
 
 		System.out.println();
 
-		numerosImparesMayoresQuePostOrden(a.getArbol(), 0, lPostOrden);
+		numerosImparesMayoresQuePostOrden(a.getArbol(), 40, lPostOrden);
 		System.out.println("lista post orden");
 		lPostOrden.comenzar();
 		while (!lPostOrden.fin())
@@ -115,11 +115,12 @@ public class RecorridosAG {
 
 		System.out.println();
 
-		numerosImparesMayoresQuePorNiveles(a.getArbol(), 0, lPorNiveles);
+		numerosImparesMayoresQuePorNiveles(a.getArbol(), 40, lPorNiveles);
 		System.out.println("lista por niveles");
 		lPorNiveles.comenzar();
 		while (!lPorNiveles.fin())
 			System.out.print(lPorNiveles.proximo() + "	");
+
 	}
 
 }
